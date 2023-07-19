@@ -10,12 +10,10 @@
 <body>
 
     <?php
-        $phrase = "To be or not to be";
-        $age = 22;
-        $gpa = 3.7;
-        $isMale = true;
+        $phrase = "Giraffe Academy";
 
-        echo $phrase;
+        // echo str_replace("Giraffe", "Panda", $phrase);
+        echo substr($phrase, 8, 3)
     ?>
 
 </body>
