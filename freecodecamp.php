@@ -11,17 +11,15 @@
 
 
     <form action="freecodecamp.php" method="get">
-        Name: <input type="text" name="name">
+        <input type="number" name="numb1">
         <br>
-        Age: <input type="number" name="age">
+        <input type="number" name="numb2">
         <input type="submit">
 
     </form>
     <br>
 
-    Your name is <?php echo $_GET["name"]?>
-    <br>
-    Your age is <?php echo $_GET["age"]?>
+    Answer: <?php echo $_GET["numb1"] + $_GET["numb2"]?>
 
 </body>
 
