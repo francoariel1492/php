@@ -11,15 +11,25 @@
 
 
     <form action="freecodecamp.php" method="get">
-        <input type="number" name="numb1">
-        <br>
-        <input type="number" name="numb2">
+        Color: <input type="text" name="color"><br>
+        Plural Noun: <input type="text" name="pluralNoun"><br>
+        celebrity: <input type="text" name="celebrity"><br>
         <input type="submit">
 
     </form>
     <br>
+    <br>
 
-    Answer: <?php echo $_GET["numb1"] + $_GET["numb2"]?>
+    <?php
+
+    $color = $_GET["color"];
+    $pluralNoun = $_GET["pluralNoun"];
+    $celebrity = $_GET["celebrity"];
+
+    echo "Roses are $color <br>";
+    echo "$pluralNoun are blue <br>";
+    echo "I love $celebrity <br>"
+        ?>
 
 </body>
 
