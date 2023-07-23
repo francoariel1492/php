@@ -9,26 +9,19 @@
 
 <body>
 
-    <?php
-        $num = 10;
-        $num += 25;
-        $num -= 2;
-        echo $num;
-        echo "<br>";
-        echo abs(-250);
-        echo "<br>";
-        echo sqrt(144);
-        echo "<br>";
-        echo max(2,10);
-        echo "<br>";
-        echo min(2,10);
-        echo "<br>";
-        echo round(3.2);
-        echo "<br>";
-        echo ceil(3.3);
-        echo "<br>";
-        echo floor(3.3)
-    ?>
+
+    <form action="freecodecamp.php" method="get">
+        Name: <input type="text" name="name">
+        <br>
+        Age: <input type="number" name="age">
+        <input type="submit">
+
+    </form>
+    <br>
+
+    Your name is <?php echo $_GET["name"]?>
+    <br>
+    Your age is <?php echo $_GET["age"]?>
 
 </body>
 
