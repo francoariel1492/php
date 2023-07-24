@@ -9,20 +9,17 @@
 
 <body>
     <form action="freecodecamp.php" method="post">
-        Single coils: <input type="checkbox" name="pickups[]" value="single"><br>
-        Double coils: <input type="checkbox" name="pickups[]" value="double"><br>
-        Actives: <input type="checkbox" name="pickups[]" value="actives"><br>
-        <br>
+        <input type="text" name="guitar">
         <input type="submit">
     </form>
 
     <?php
+    $brands = array("gibson" => "les paul", "fender" => "stratocaster", "ltd" => "ec-1000");
+    echo "<br>";
 
-    $pickups = $_POST["pickups"];
-    echo $pickups[2];
+    echo $brands[$_POST["guitar"]];
 
-
-    ?>
+        ?>
 
 </body>
 
