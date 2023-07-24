@@ -8,26 +8,20 @@
 </head>
 
 <body>
+    <form action="freecodecamp.php" method="post">
+        Single coils: <input type="checkbox" name="pickups[]" value="single"><br>
+        Double coils: <input type="checkbox" name="pickups[]" value="double"><br>
+        Actives: <input type="checkbox" name="pickups[]" value="actives"><br>
+        <br>
+        <input type="submit">
+    </form>
 
     <?php
-        $guitars = array("les paul", "stratocaster", "telecaster", "mockingbird") ;
-        echo $guitars[0];
-        echo "<br>";
-        echo $guitars[1];
-        echo "<br>";
-        echo $guitars[2];
-        echo "<br>";
-        echo $guitars[3];
-        $guitars[0] = "lucille";
-        echo "<br>";
-        echo $guitars[0];
-        //add info to the array
-        $guitars[4] = "bc rich";
-        echo "<br>";
-        echo $guitars[4];
-        echo "<br>";
-        //count the elements of the array
-        echo count($guitars)
+
+    $pickups = $_POST["pickups"];
+    echo $pickups[2];
+
+
     ?>
 
 </body>
