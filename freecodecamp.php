@@ -10,18 +10,16 @@
 <body>
 
     <?php
-        $isMale = false;
-        $isTall = false;
-        if($isMale && $isTall){
-            echo "You are tall male";
-        }elseif ($isMale && !$isTall){
-            echo "You are short male";
-        }elseif (!$isMale && $isTall){
-            echo "You are not male but are tall";
+        function getMax($num1,$num2, $num3){
+            if($num1 >= $num2 && $num1 >= $num3){
+                return $num1;
+            }elseif ($num2 >= $num1 && $num2 >= $num3){
+                return $num2;
+            }else{
+                return $num3;
+            }
         }
-        else{
-            echo "You are not male and not tall";
-        }
+        echo getMax(10,20,30)
     ?>
 
 </body>
