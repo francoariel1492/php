@@ -10,32 +10,32 @@
 <body>
 
     <form action="freecodecamp.php" method="post">
-        First num:<input type="number" step="0.1" name="num1">
-        <br>
-        OP: <input type="text" name="op">
-        <br>
-        Second num:<input type="number" step="0.1" name="num2">
-        <br>
+        What was your grade?
+        <input type="text" name="grade">
         <input type="submit">
     </form>
 
     <?php
-
-        $num1 = $_POST["num1"];
-        $num2 = $_POST["num2"];
-        $op = $_POST["op"];
-
-        if($op == "+"){
-            echo $num1 + $num2;
-        }elseif ($op == "-"){
-            echo $num1 - $num2;
-        }elseif ($op == "/"){
-            echo $num1 / $num2;
-        }elseif ($op == "*"){
-            echo $num1 * $num2;
-        }else{
-            echo "Invalid operator";
-        }
+    $grade = $_POST["grade"];
+    switch ($grade) {
+        case 'A':
+            echo "you really study";
+            break;
+        case 'B':
+            echo "you almost get it";
+            break;
+        case 'C':
+            echo "you need to study more";
+            break;
+        case 'D':
+            echo "you did very bad";
+            break;
+        case 'F':
+            echo "you didn't study at all";
+            break;
+        default:
+            echo "Invalid grade";
+    }
     ?>
 
 </body>
