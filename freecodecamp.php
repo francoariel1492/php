@@ -8,22 +8,20 @@
 </head>
 
 <body>
-    <!-- <form action="freecodecamp.php" method="post">
-        <input type="text" name="guitar">
-        <input type="submit">
-    </form> -->
 
     <?php
-        function cube($num){
-            echo "The cube is ";
-            return $num * $num * $num; 
+        $isMale = false;
+        $isTall = false;
+        if($isMale && $isTall){
+            echo "You are tall male";
+        }elseif ($isMale && !$isTall){
+            echo "You are short male";
+        }elseif (!$isMale && $isTall){
+            echo "You are not male but are tall";
         }
-
-        $cubeResult = cube(2);
-
-        echo "$cubeResult<br>";
-        echo cube(2)
-
+        else{
+            echo "You are not male and not tall";
+        }
     ?>
 
 </body>
