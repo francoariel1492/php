@@ -14,14 +14,15 @@
     </form> -->
 
     <?php
+        function cube($num){
+            echo "The cube is ";
+            return $num * $num * $num; 
+        }
 
-        function sayHi($name, $age){
-            echo "Hello $name, you are $age<br>";
-        };
+        $cubeResult = cube(2);
 
-        sayHi("Franco", 31);
-        sayHi("Ozzy", 12);
-        sayHi("Gastly", 28);
+        echo "$cubeResult<br>";
+        echo cube(2)
 
     ?>
 
