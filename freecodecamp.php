@@ -9,17 +9,25 @@
 
 <body>
 
-
-    <form action="freecodecamp.php" method="post">
-        Password: <input type="password" name="password"><br>
-        <input type="submit">
-
-    </form>
-    <br>
-    <br>
-
     <?php
-    echo $_POST["password"];
+        $guitars = array("les paul", "stratocaster", "telecaster", "mockingbird") ;
+        echo $guitars[0];
+        echo "<br>";
+        echo $guitars[1];
+        echo "<br>";
+        echo $guitars[2];
+        echo "<br>";
+        echo $guitars[3];
+        $guitars[0] = "lucille";
+        echo "<br>";
+        echo $guitars[0];
+        //add info to the array
+        $guitars[4] = "bc rich";
+        echo "<br>";
+        echo $guitars[4];
+        echo "<br>";
+        //count the elements of the array
+        echo count($guitars)
     ?>
 
 </body>
