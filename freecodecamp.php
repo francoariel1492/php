@@ -8,18 +8,22 @@
 </head>
 
 <body>
-    <form action="freecodecamp.php" method="post">
+    <!-- <form action="freecodecamp.php" method="post">
         <input type="text" name="guitar">
         <input type="submit">
-    </form>
+    </form> -->
 
     <?php
-    $brands = array("gibson" => "les paul", "fender" => "stratocaster", "ltd" => "ec-1000");
-    echo "<br>";
 
-    echo $brands[$_POST["guitar"]];
+        function sayHi($name, $age){
+            echo "Hello $name, you are $age<br>";
+        };
 
-        ?>
+        sayHi("Franco", 31);
+        sayHi("Ozzy", 12);
+        sayHi("Gastly", 28);
+
+    ?>
 
 </body>
 
