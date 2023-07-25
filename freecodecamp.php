@@ -10,14 +10,31 @@
 <body>
 
     <?php
-        // $title = "My first post";
-        // $author = "Franco";
-        // $wordCount = 400;
-        // include "article-header.php";
 
-        include "useful-tools.php";
-        sayHi("Franco<br>");
-        echo $feetInMile;
+    
+    class Book
+    {
+        var $title;
+        var $author;
+        var $pages;
+    }
+
+    $book1 = new Book;
+    $book1->title = "Harry Potter";
+    $book1->author = "J K Rowling";
+    $book1->pages = 400;
+
+    $book2 = new Book;
+    $book2->title = "The lord of the rings";
+    $book2->author = "Tolkien";
+    $book2->pages = 7800;
+
+
+    echo $book1->title;
+    echo $book2->title;
+
+
+
     ?>
 
 </body>
