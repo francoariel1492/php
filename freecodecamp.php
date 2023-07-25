@@ -11,31 +11,34 @@
 
     <?php
 
-    
-    class Student {
-        var $name;
-        var $major;
-        var $gpa;
 
-        function __construct($name,$major,$gpa){
-            $this->name = $name;
-            $this->major = $major;
-            $this->gpa = $gpa;
+    class Movie
+    {
+        public $title;
+        private $rating;
 
+        function __construct($title, $rating)
+        {
+            $this->title = $title;
+            $this->setRating($rating);
         }
-        function hasHonors(){
-            if($this->gpa >= 7){
-                return "true";
+
+        function getRating()
+        {
+            return $this->rating;
+        }
+        function setRating($rating)
+        {
+            if ($rating == "G" || $rating == "PG" || $rating == "R" || $rating == "NR") {
+                $this->rating = $rating;
+            }else{
+                $this->rating = "NR";
             }
-            return "false";
         }
     }
 
-    $student1 = new Student("Franco","Programming",5);
-    $student2 = new Student("Poncho","Music", 22);
-
-
-    echo $student2->hasHonors();
+    $avengers = new Movie("Avengers", "PG");
+    echo $avengers->getRating();
 
 
 
