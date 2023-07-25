@@ -12,26 +12,24 @@
     <?php
 
     
-    class Book
-    {
+    class Book {
         var $title;
         var $author;
         var $pages;
+
+        function __construct($aTitle,$aAuthor,$aPages){
+            $this->title = $aTitle;
+            $this->author = $aAuthor;
+            $this->pages = $aPages;
+
+        }
     }
 
-    $book1 = new Book;
-    $book1->title = "Harry Potter";
-    $book1->author = "J K Rowling";
-    $book1->pages = 400;
-
-    $book2 = new Book;
-    $book2->title = "The lord of the rings";
-    $book2->author = "Tolkien";
-    $book2->pages = 7800;
+    $book1 = new Book("Harry Potter","J K Rowling",400);
+    $book2 = new Book("The lord of the rings","Tolkien", 700);
 
 
     echo $book1->title;
-    echo $book2->title;
 
 
 
