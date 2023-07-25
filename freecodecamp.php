@@ -9,32 +9,11 @@
 
 <body>
 
-    <form action="freecodecamp.php" method="post">
-        What was your grade?
-        <input type="text" name="grade">
-        <input type="submit">
-    </form>
-
     <?php
-    $grade = $_POST["grade"];
-    switch ($grade) {
-        case 'A':
-            echo "you really study";
-            break;
-        case 'B':
-            echo "you almost get it";
-            break;
-        case 'C':
-            echo "you need to study more";
-            break;
-        case 'D':
-            echo "you did very bad";
-            break;
-        case 'F':
-            echo "you didn't study at all";
-            break;
-        default:
-            echo "Invalid grade";
+    $index = 1;
+    while ($index <= 10) {
+        echo "$index<br>";
+        $index++;
     }
     ?>
 
