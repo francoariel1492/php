@@ -12,24 +12,30 @@
     <?php
 
     
-    class Book {
-        var $title;
-        var $author;
-        var $pages;
+    class Student {
+        var $name;
+        var $major;
+        var $gpa;
 
-        function __construct($aTitle,$aAuthor,$aPages){
-            $this->title = $aTitle;
-            $this->author = $aAuthor;
-            $this->pages = $aPages;
+        function __construct($name,$major,$gpa){
+            $this->name = $name;
+            $this->major = $major;
+            $this->gpa = $gpa;
 
+        }
+        function hasHonors(){
+            if($this->gpa >= 7){
+                return "true";
+            }
+            return "false";
         }
     }
 
-    $book1 = new Book("Harry Potter","J K Rowling",400);
-    $book2 = new Book("The lord of the rings","Tolkien", 700);
+    $student1 = new Student("Franco","Programming",5);
+    $student2 = new Student("Poncho","Music", 22);
 
 
-    echo $book1->title;
+    echo $student2->hasHonors();
 
 
 
