@@ -9,9 +9,16 @@
 
 <body>
 
-    <?php  include "header.html";?>
-    <p>Hello mundo</p>
-    <?php  include "footer.html";?>
+    <?php
+        // $title = "My first post";
+        // $author = "Franco";
+        // $wordCount = 400;
+        // include "article-header.php";
+
+        include "useful-tools.php";
+        sayHi("Franco<br>");
+        echo $feetInMile;
+    ?>
 
 </body>
 
